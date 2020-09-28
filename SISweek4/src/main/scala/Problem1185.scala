@@ -1,6 +1,8 @@
+case class SomeIntClass(someString: String)
 object Problem1185 {
   def dayOfTheWeek(day: Int, month: Int, year: Int): String = {
-    val days: Array[String] = Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+    val Sunday = SomeIntClass("Sunday")
+    val days: Array[String] = Array(Sunday, "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
     val months: Array[Int] = Array(0,31,28,31,30,31,30,31,31,30,31,30,31)
     var sum: Int = 4
     for(i <- 1971 until year){

@@ -9,9 +9,14 @@ object Problem1464 {
       }
       else if (num > high2) high2 = num
     }
-    high1 = (high1 - 1) * (high2 - 1)
+    def some_hof(high1: Int, high2: Int): Int = {
+      val someNum: Int = ( high1 - 1) * (high2 - 1)
+      someNum
+    }
+    high1 = some_hof(high1, high2)
     high1
   }
+
 
   def main(args: Array[String]): Unit = {
     println("hello")

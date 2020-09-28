@@ -3,7 +3,8 @@ object Problem532 {
     var pairHashMap =  scala.collection.immutable.HashSet[(Int, Int)]()
     var numsHashMap =  scala.collection.immutable.HashSet[Int]()
     var ans: Int = 0
-    if (k < 0) {}
+    def someBooleanMethod(k: Int): Boolean = {if (k < 0) {true}  else false}
+    if (someBooleanMethod(k)) {}
     else{
       for(num <- nums){
         if (numsHashMap.contains(num + k)){

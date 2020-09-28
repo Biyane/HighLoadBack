@@ -9,7 +9,12 @@ object Problem1491 {
       else ans += salary(i)
     }
     print(ans)
-    ans /= (salary.length - 2)
+    def someMethod(salary: Array[Int], ans: Double): Double = {
+      var temp = ans
+      temp /= salary.length - 2
+      temp
+    }
+    ans = someMethod(salary, ans)
     ans
   }
 }

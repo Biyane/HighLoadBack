@@ -1,0 +1,17 @@
+[debug] Packaging D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS5Week5\target\scala-2.13\sis5week5_2.13-0.1.jar ...
+[debug] Input file mappings:
+[debug] 	RegexProblem$.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS5Week5\target\scala-2.13\classes\RegexProblem$.class
+[debug] 	RegexProblem$Answer$.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS5Week5\target\scala-2.13\classes\RegexProblem$Answer$.class
+[debug] 	RegexProblem$Answer.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS5Week5\target\scala-2.13\classes\RegexProblem$Answer.class
+[debug] 	RegexProblem$delayedInit$body.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS5Week5\target\scala-2.13\classes\RegexProblem$delayedInit$body.class
+[debug] 	RegexProblem$Product$.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS5Week5\target\scala-2.13\classes\RegexProblem$Product$.class
+[debug] 	RegexProblem$Product.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS5Week5\target\scala-2.13\classes\RegexProblem$Product.class
+[debug] 	RegexProblem.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS5Week5\target\scala-2.13\classes\RegexProblem.class
+[debug] Done packaging.

@@ -1,8 +1,11 @@
 import java.io.{BufferedWriter, File, PrintWriter}
 
+import RegexProblem.arrayOfDuplicatePart
 import io.circe._
 import io.circe.syntax._
-import io.circe.generic.auto._, io.circe.parser._
+import io.circe.generic.auto._
+import io.circe.parser._
+
 import scala.io.Source
 import scala.util.matching.Regex
 
@@ -15,9 +18,9 @@ object RegexProblem extends App {
   case class FiscalFeature(name: String, value: String)
 
   case class Product(nameOfProduct: String, cost: String, totalCost: String)
-//  `Продажа`: Array[Json],
-  case class Answer(`Дубликаты`: List[Json], `Покупка`: Array[Product],
-                    `Стоимость`: List[Json], `Фискальный признак`: List[Json])
+
+  case class Answer(`Дубликаты`: Json, `Покупка`: Array[Product],
+                    `Стоимость`: Json, `Фискальный признак`: Json)
 
   case class Test(`Покупка`: Array[Product])
 
@@ -26,12 +29,9 @@ object RegexProblem extends App {
   var innerProductArray: Array[String] = Array[String]()
   var arrayOfProductObjects: Array[Product] = Array[Product]()
   var arrayOfDuplicatePart: Array[Duplicate] = Array[Duplicate]()
-  var listOfJsonObjectOfDuplicatePart: List[Json] = Nil
   var arrayOfOverallCostPart: Array[OverallPrice] = Array[OverallPrice]()
   var subStringOfOverallCostPart: String = ""
-  var listOfOverallJsonObject: List[Json] = Nil
   var arrayOfFiscalFeature: Array[FiscalFeature] = Array[FiscalFeature]()
-  var listOfJsonOfFiscalFuture: List[Json] = Nil
   val file_name = "BackSIS.text"
   val fSource = Source.fromFile(file_name)
   for (line <- fSource.getLines) {
@@ -100,36 +100,44 @@ object RegexProblem extends App {
         if (tempRegex matches line) {
           for (patterMatch <- tempRegex.findAllMatchIn(line))
             arrayOfFiscalFeature :+= FiscalFeature("город", s"${patterMatch.group(1)}")
-          //          val strTemp = tempRegex.findAllMatchIn(line)
 
         }
         else if (tempRegex2 matches line) {
           for (patterMatch <- tempRegex2.findAllMatchIn(line))
             arrayOfFiscalFeature :+= FiscalFeature(s"${patterMatch.group(1)}", s"${patterMatch.group(2)}")
-          //          val strTemp = tempRegex2.findAllMatchIn(line)
-
         }
 
       case _ =>
     }
   }
-  for (duplicate <- arrayOfDuplicatePart) {
-    listOfJsonObjectOfDuplicatePart :+= Json.obj(
-      duplicate.name -> duplicate.value.asJson
-    )
-  }
-  for (price <- arrayOfOverallCostPart) {
-    listOfOverallJsonObject :+= Json.obj(
-      price.name -> price.value.asJson
-    )
-  }
-  for (feature <- arrayOfFiscalFeature) {
-    listOfJsonOfFiscalFuture :+= Json.obj(
-      feature.name -> feature.value.asJson
-    )
-  }
-  val answer = Answer(listOfJsonObjectOfDuplicatePart, arrayOfProductObjects,
-    listOfOverallJsonObject, listOfJsonOfFiscalFuture)
+
+  val answerDuplicate: Json = Json.obj(
+    arrayOfDuplicatePart(0).name -> arrayOfDuplicatePart(0).value.asJson,
+    arrayOfDuplicatePart(1).name -> arrayOfDuplicatePart(1).value.asJson,
+    arrayOfDuplicatePart(2).name -> arrayOfDuplicatePart(2).value.asJson,
+    arrayOfDuplicatePart(3).name -> arrayOfDuplicatePart(3).value.asJson,
+    arrayOfDuplicatePart(4).name -> arrayOfDuplicatePart(4).value.asJson,
+    arrayOfDuplicatePart(5).name -> arrayOfDuplicatePart(5).value.asJson,
+    arrayOfDuplicatePart(6).name -> arrayOfDuplicatePart(6).value.asJson,
+    arrayOfDuplicatePart(7).name -> arrayOfDuplicatePart(7).value.asJson,
+    arrayOfDuplicatePart(8).name -> arrayOfDuplicatePart(8).value.asJson,
+  )
+  val answerOverallObject: Json = Json.obj(
+    arrayOfOverallCostPart(0).name -> arrayOfOverallCostPart(0).value.asJson,
+    arrayOfOverallCostPart(1).name -> arrayOfOverallCostPart(1).value.asJson,
+    arrayOfOverallCostPart(2).name -> arrayOfOverallCostPart(2).value.asJson,
+
+  )
+  val answerFiscalFeatureObject: Json = Json.obj(
+    arrayOfFiscalFeature(0).name -> arrayOfFiscalFeature(0).value.asJson,
+    arrayOfFiscalFeature(1).name -> arrayOfFiscalFeature(1).value.asJson,
+    arrayOfFiscalFeature(2).name -> arrayOfFiscalFeature(2).value.asJson,
+    arrayOfFiscalFeature(3).name -> arrayOfFiscalFeature(3).value.asJson,
+    arrayOfFiscalFeature(4).name -> arrayOfFiscalFeature(4).value.asJson,
+    arrayOfFiscalFeature(5).name -> arrayOfFiscalFeature(5).value.asJson
+  )
+  val answer = Answer(answerDuplicate, arrayOfProductObjects,
+    answerOverallObject, answerFiscalFeatureObject)
   val new_File = new File("answer.text")
   val file_writter = new PrintWriter(new_File)
   val bw = new BufferedWriter(file_writter)

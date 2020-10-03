@@ -1,6 +1,5 @@
 import java.io.{BufferedWriter, File, PrintWriter}
 
-import RegexProblem.arrayOfDuplicatePart
 import io.circe._
 import io.circe.syntax._
 import io.circe.generic.auto._
@@ -139,27 +138,9 @@ object RegexProblem extends App {
   val answer = Answer(answerDuplicate, arrayOfProductObjects,
     answerOverallObject, answerFiscalFeatureObject)
   val new_File = new File("answer.text")
-  val file_writter = new PrintWriter(new_File)
-  val bw = new BufferedWriter(file_writter)
+  val file_writer = new PrintWriter(new_File)
+  val bw = new BufferedWriter(file_writer)
   val test = Test(arrayOfProductObjects)
   bw.write(answer.asJson.toString())
   bw.close()
 }
-
-//val regex: Regex = "([0-9a-zA-Zа-я-А-Я%#.,]+)".r
-
-//  val regex2: Regex = "\\d.".r
-//
-//  for (line <- fSource.getLines) {
-//    if (regex2.findFirstMatchIn(line).isDefined){}
-//    else println(line)
-//  }
-//  println(arr.asJson)
-//  var someStr: String = " № 0014377"
-//  var someStr2: String = "hello from Irvana"
-//  var cnt: Int = 0
-//  var strArr: Array[String] = Array[String]()
-//  var arr2 = someStr.split(" ")
-//  var arr3 = someStr2.split(" ")
-//  println(arr2(0), arr2(1), arr2(2))
-//  println(arr3(0), arr3(1))

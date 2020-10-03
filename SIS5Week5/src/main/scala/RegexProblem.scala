@@ -66,6 +66,7 @@ object RegexProblem extends App {
           if (innerProductCnt == 4) {
             val product = Product(innerProductArray(0), innerProductArray(1), innerProductArray(2))
             arrayOfProductObjects :+= product
+            innerProductArray = Array.empty[String]
           }
           else if (innerProductCnt < 4) {
             innerProductArray :+= line

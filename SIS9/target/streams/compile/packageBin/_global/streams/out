@@ -1,0 +1,41 @@
+[debug] Packaging D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\sis9_2.13-0.1.jar ...
+[debug] Input file mappings:
+[debug] 	application.conf
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\application.conf
+[debug] 	ConsumerApp$.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\ConsumerApp$.class
+[debug] 	ConsumerApp.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\ConsumerApp.class
+[debug] 	HttpServer$.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\HttpServer$.class
+[debug] 	HttpServer.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\HttpServer.class
+[debug] 	MainApp$.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\MainApp$.class
+[debug] 	MainApp$delayedInit$body.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\MainApp$delayedInit$body.class
+[debug] 	MainApp$OffsetStore$1.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\MainApp$OffsetStore$1.class
+[debug] 	MainApp.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\MainApp.class
+[debug] 	reference.conf
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\reference.conf
+[debug] 	Test$.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\Test$.class
+[debug] 	Test$Author$.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\Test$Author$.class
+[debug] 	Test$Author.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\Test$Author.class
+[debug] 	Test$Hashtag$.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\Test$Hashtag$.class
+[debug] 	Test$Hashtag.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\Test$Hashtag.class
+[debug] 	Test$Tweet$$anonfun$hashtags$1.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\Test$Tweet$$anonfun$hashtags$1.class
+[debug] 	Test$Tweet$.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\Test$Tweet$.class
+[debug] 	Test$Tweet.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\Test$Tweet.class
+[debug] 	Test.class
+[debug] 	  D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes\Test.class
+[debug] Done packaging.

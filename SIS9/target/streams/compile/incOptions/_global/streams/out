@@ -1,0 +1,11 @@
+[debug] Created transactional ClassFileManager with tempDir = D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes.bak
+[debug] About to delete class files:
+[debug] 	HttpServer$.class
+[debug] 	HttpServer.class
+[debug] We backup class files:
+[debug] 	HttpServer$.class
+[debug] 	HttpServer.class
+[debug] Registering generated classes:
+[debug] 	HttpServer$.class
+[debug] 	HttpServer.class
+[debug] Removing the temporary directory used for backing up class files: D:\KBTU\KBTU3\BackEnd\Code\SIS\SIS9\target\scala-2.13\classes.bak
